@@ -13,21 +13,23 @@
         android:theme="@style/Theme.LanguageLearningQuiz"
         tools:targetApi="31">
         <activity
-            android:name=".chooseLanguageActivity"
+            android:name=".SpanishQuizActivity"
             android:exported="false" />
-
+        <activity
+            android:name=".ChineseQuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".chooseLanguageActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LanguageLearningQuiz.NoActionBar" />
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.LanguageLearningQuiz.NoActionBar" />
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
-
-
-
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false"/>
+            android:exported="false"
+            android:theme="@style/Theme.LanguageLearningQuiz.NoActionBar" />
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -43,7 +45,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "801868535539",
+    "project_id": "languagelearningquiz",
+    "storage_bucket": "languagelearningquiz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801868535539:android:277225a8582934a2988986",
+        "android_client_info": {
+          "package_name": "com.example.languagelearningquiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801868535539-00bf8rfr78f4tumj1hujrci4vc58vc79.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCyLVeBtBNvQLMPJzueTP8rex3tEid1YA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "801868535539-00bf8rfr78f4tumj1hujrci4vc58vc79.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

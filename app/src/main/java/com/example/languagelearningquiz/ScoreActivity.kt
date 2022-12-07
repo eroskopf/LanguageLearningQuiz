@@ -2,8 +2,6 @@ package com.example.languagelearningquiz
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import com.example.languagelearningquiz.databinding.ActivityMainBinding
 import com.example.languagelearningquiz.databinding.ActivityScoreBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -13,11 +11,14 @@ class ScoreActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityScoreBinding
     private lateinit var auth: FirebaseAuth
+    private lateinit var database: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityScoreBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //should get fed in intent as the score from the quiz
 
 
     }
@@ -28,8 +29,17 @@ class ScoreActivity : AppCompatActivity() {
         auth = Firebase.auth
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
-        //updateUI(currentUser)
+        val id = currentUser?.uid
+
+        database = Firebase.database.reference
+
+        database.child("users").child(id).child("score").setValue(SCORE)
+
+        //check if the user is already in the firebase scoreboard
+        if (id is in )
+
         /*
+        this is for the sign in screen not the sign out screen
         customToken?.let {
             auth.signInWithCustomToken(it)
                 .addOnCompleteListener(this) { task ->
@@ -49,5 +59,7 @@ class ScoreActivity : AppCompatActivity() {
         }
 
          */
+
+
     }
 }

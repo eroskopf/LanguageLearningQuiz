@@ -13,8 +13,18 @@
         android:theme="@style/Theme.LanguageLearningQuiz"
         tools:targetApi="31">
         <activity
-            android:name=".ScoreActivity"
+            android:name=".chooseLanguageActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+
+
         <activity
             android:name=".LoginActivity"
             android:exported="false"/>
@@ -33,9 +43,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+
     </application>
 
 </manifest>

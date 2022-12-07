@@ -8,7 +8,7 @@ import android.util.Log
 import android.widget.Toast
 import com.example.languagelearningquiz.data.LanguageUser
 import com.example.languagelearningquiz.databinding.ActivityLoginBinding
-import com.example.languagelearningquiz.databinding.ActivityScoreBinding
+
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
@@ -83,7 +83,7 @@ class LoginActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
 
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, chooseLanguageActivity::class.java))
 
             }.addOnFailureListener {
                 Toast.makeText(

@@ -11,7 +11,7 @@ class ScoreActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityScoreBinding
     private lateinit var auth: FirebaseAuth
-    private lateinit var database: DatabaseReference
+    //private lateinit var database: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,12 +31,10 @@ class ScoreActivity : AppCompatActivity() {
         val currentUser = auth.currentUser
         val id = currentUser?.uid
 
-        database = Firebase.database.reference
+        //database = Firebase.database.reference
 
-        database.child("users").child(id).child("score").setValue(SCORE)
+        //database.child("users").child(id).child("score").setValue(SCORE)
 
-        //check if the user is already in the firebase scoreboard
-        if (id is in )
 
         /*
         this is for the sign in screen not the sign out screen

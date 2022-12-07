@@ -2,6 +2,7 @@ package com.example.languagelearningquiz
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.languagelearningquiz.data.LanguageUser
 import com.example.languagelearningquiz.databinding.ActivityScoreBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -12,33 +13,39 @@ class ScoreActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityScoreBinding
     private lateinit var auth: FirebaseAuth
-
+    private lateinit var language: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityScoreBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //should get fed in intent as the score from the quiz
+        language = intent.getStringExtra("language").toString()
+        //Get chinese scoreboard
 
+        //get spanish scoreboard
 
     }
 
-    override fun onStart() {
-        super.onStart()
 
+    private fun setAttributes() {
         auth = Firebase.auth
+        val db = FirebaseFirestore.getInstance()
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
         val id = currentUser?.uid
+        var score = 0
 
-        val doc = FirebaseFirestore.getInstance()
+        val userDocRef = db
             .collection("languageusers")
             .whereEqualTo("uid", id)
-            .get()
+            .get().addOnSuccessListener {
+                val langUser = it.documents.get(0).toObject(LanguageUser::class.java)
+                score = langUser!!.score
+            }
 
 
-
-
+        //setting things
+        //db.collection("languageusers").document("LA").set(created new user object)
     }
 }

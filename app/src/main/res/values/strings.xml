@@ -18,4 +18,11 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="enter_display_name">Enter Display Name</string>
+    <string name="_123456">123456</string>
+    <string name="password">Password</string>
+    <string name="email">email</string>
+    <string name="john_doe_hu">john@doe.hu</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
 </resources>

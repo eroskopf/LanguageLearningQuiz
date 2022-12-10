@@ -49,9 +49,11 @@ class LoginActivity : AppCompatActivity() {
 
                 val uid = it.user!!.uid
                 val user = LanguageUser(
+                    binding.etDisplayName.text.toString(),
                     "Chinese",
                     0,
-                    uid
+                    0,
+                    uid,
                 )
                 FirebaseFirestore.getInstance().collection("languageusers").add(user)
                     .addOnSuccessListener { documentReference ->

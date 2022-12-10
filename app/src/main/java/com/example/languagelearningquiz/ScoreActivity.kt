@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.languagelearningquiz.data.LanguageUser
 import com.example.languagelearningquiz.databinding.ActivityScoreBinding
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -16,6 +17,8 @@ class ScoreActivity : AppCompatActivity() {
     lateinit var binding: ActivityScoreBinding
     private lateinit var auth: FirebaseAuth
     private lateinit var language: String
+    private lateinit var adapter: ScoreAdapter
+    public var list = mutableListOf<LanguageUser>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,8 +29,11 @@ class ScoreActivity : AppCompatActivity() {
         //check to see if new score is high score
         setAttributes(newScore)
 
+
+        initRecyclerView()
+
         //display the scoreboards
-        displayScoreboard()
+        getList()
 
     }
 
@@ -68,27 +74,46 @@ class ScoreActivity : AppCompatActivity() {
             }
     }
 
-    private fun displayScoreboard() {
+    private fun getList() {
         //will display the current language scoreboard
         val db = FirebaseFirestore.getInstance()
-        var list = mutableListOf<LanguageUser>()
         if (language == "Chinese") {
             val userDocRef = db
                 .collection("languageusers")
                 .whereEqualTo("language", language)
-                .orderBy("chScore", Query.Direction.DESCENDING)
+                .orderBy("ChScore", Query.Direction.DESCENDING)
                 .get().addOnSuccessListener {
                     val length = it.documents.size
                     var langUser: LanguageUser
                     for (i in 0 until length) {
                         langUser = it.documents.get(i).toObject(LanguageUser::class.java)!!
-                        list.add(langUser)
+                        userCreated(langUser)
+                        //will add in order
                     }
-                    //now have an ordered list of language users
-
                 }
         } else {
-
+            val userDocRef = db
+                .collection("languageusers")
+                .whereEqualTo("language", language)
+                .orderBy("SpScore", Query.Direction.DESCENDING)
+                .get().addOnSuccessListener {
+                    val length = it.documents.size
+                    var langUser: LanguageUser
+                    for (i in 0 until length) {
+                        langUser = it.documents.get(i).toObject(LanguageUser::class.java)!!
+                        userCreated(langUser)
+                        //will add in order
+                    }
+                }
         }
+    }
+
+    private fun initRecyclerView() {
+        adapter = ScoreAdapter(this)
+        binding.recyclerScores.adapter = adapter
+    }
+
+    private fun userCreated(user: LanguageUser) {
+        adapter.addUser(user)
     }
 }

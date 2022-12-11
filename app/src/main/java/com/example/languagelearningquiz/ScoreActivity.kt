@@ -18,7 +18,6 @@ class ScoreActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var language: String
     private lateinit var adapter: ScoreAdapter
-    public var list = mutableListOf<LanguageUser>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

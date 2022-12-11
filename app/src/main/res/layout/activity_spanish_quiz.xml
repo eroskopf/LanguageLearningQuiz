@@ -37,8 +37,14 @@
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/Theme.LanguageLearningQuiz.PopupOverlay" />
 
+
+
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -245,19 +251,7 @@
 
 
 
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerTodo"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="20dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            />
     </LinearLayout>
-
-
-
-
-
+    </ScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

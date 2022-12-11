@@ -1,5 +1,6 @@
 package com.example.languagelearningquiz
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.appbar.CollapsingToolbarLayout
@@ -32,7 +33,9 @@ class SpanishQuizActivity : AppCompatActivity() {
         binding.submitbtn.setOnClickListener {
             score = 0
             calculateScore()
-            startActivity(Intent(this, ScoreActivity::class.java))
+            val intent = Intent(this, ScoreActivity::class.java)
+            intent.putExtra("score", score)
+            startActivity(intent)
         }
     }
 

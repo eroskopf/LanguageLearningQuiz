@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">LanguageLearningQuiz</string>
     <string name="span_quiz_name">Spanish Quiz</string>
+    <string name="chin_quiz_name">Spanish Quiz</string>
 
     <string name="action_settings">Settings</string>
     <string name="large_text">Cole</string>
@@ -100,4 +101,5 @@
         <item>el muro</item>
         <item>la casa</item>
     </string-array>
+    <string name="title_activity_chinese_quiz">ChineseQuizActivity</string>
 </resources>

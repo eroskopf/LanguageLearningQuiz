@@ -1,5 +1,6 @@
 package com.example.languagelearningquiz
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -10,6 +11,8 @@ import com.example.languagelearningquiz.databinding.ActivitySpanishQuizBinding
 class SpanishQuizActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySpanishQuizBinding
+
+    var score: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,10 +29,14 @@ class SpanishQuizActivity : AppCompatActivity() {
 //                .setAction("Action", null).show()
 //        }
 
-        binding.submitbtn.setOnClickListener { }
+        binding.submitbtn.setOnClickListener {
+            score = 0
+            calculateScore()
+            startActivity(Intent(this, ScoreActivity::class.java))
+        }
     }
 
-    var score: Int = 0
+
 
     fun calculateScore() {
         val answer1 = binding.q1.selectedItemPosition
@@ -74,7 +81,7 @@ class SpanishQuizActivity : AppCompatActivity() {
             1 -> {score+=1}
         }
 
-        binding.testScore.text = score.toString()
+        //binding.testScore.text = score.toString()
 
 
 

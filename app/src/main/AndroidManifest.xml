@@ -11,16 +11,17 @@
         android:roundIcon="@drawable/languagelogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.LanguageLearningQuiz"
-        tools:targetApi="31"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".ChineseQuizActivity"
+            android:exported="false"
+            android:label="@string/chin_quiz_name"
+            android:theme="@style/Theme.LanguageLearningQuiz.NoActionBar" />
         <activity
             android:name=".SpanishQuizActivity"
             android:exported="false"
             android:label="@string/span_quiz_name"
-            android:theme="@style/Theme.LanguageLearningQuiz.NoActionBar" />
-        <activity
-            android:name=".ChineseQuizActivity"
-            android:exported="false"
             android:theme="@style/Theme.LanguageLearningQuiz.NoActionBar" />
         <activity
             android:name=".chooseLanguageActivity"

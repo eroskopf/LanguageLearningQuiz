@@ -39,7 +39,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/enter_display_name" />
+            android:text="@string/enter_display_name"
+            android:hint="Enter name to be displayed"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"

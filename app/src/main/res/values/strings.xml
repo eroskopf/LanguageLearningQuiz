@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">LanguageLearningQuiz</string>
+    <string name="span_quiz_name">Spanish Quiz</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="large_text">Cole</string>
+    <string name="password">enter password</string>
+    <string name="_123456">123456</string>
+    <string name="email">enter email address here</string>
+    <string name="john_doe_hu">john_doe@ait.hu</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="enter_display_name"></string>
+
     <string name="title_activity_splash">SplashActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -18,11 +30,74 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="enter_display_name">Enter Display Name</string>
-    <string name="_123456">123456</string>
-    <string name="password">Password</string>
-    <string name="email">email</string>
-    <string name="john_doe_hu">john@doe.hu</string>
-    <string name="register">Register</string>
-    <string name="login">Login</string>
+
+    <string-array name="span_q1_options">
+        <item>bonjour</item>
+        <item>hola</item>
+        <item>szia</item>
+        <item>hombre</item>
+    </string-array>
+
+    <string-array name="span_q2_options">
+        <item>estar vivir en budapest</item>
+        <item>me llamo Budapest</item>
+        <item>estoy viviendo en Budapest</item>
+        <item>soy en Budapest</item>
+    </string-array>
+
+    <string-array name="span_q3_options">
+        <item>ocho y treinta</item>
+        <item>uno dos tres</item>
+        <item>nueve menos treinta</item>
+        <item>ocho y media</item>
+    </string-array>
+
+    <string-array name="span_q4_options">
+        <item>el gato</item>
+        <item>el porro</item>
+        <item>la oveja</item>
+        <item>el perro</item>
+    </string-array>
+
+    <string-array name="span_q5_options">
+        <item>el baño</item>
+        <item>la casa</item>
+        <item>la baño</item>
+        <item>la escuela</item>
+    </string-array>
+
+    <string-array name="span_q6_options">
+        <item>escribir</item>
+        <item>hablar</item>
+        <item>pelear</item>
+        <item>conducir</item>
+    </string-array>
+
+    <string-array name="span_q7_options">
+        <item>estamos neviendo</item>
+        <item>está nevando</item>
+        <item>soy nevía</item>
+        <item>estoy nevando</item>
+    </string-array>
+
+    <string-array name="span_q8_options">
+        <item>el mano</item>
+        <item>la chaqueta</item>
+        <item>la maleta</item>
+        <item>la cama</item>
+    </string-array>
+
+    <string-array name="span_q9_options">
+        <item>¡AIT es el besto!</item>
+        <item>¡AIT es el mas mejor</item>
+        <item>¡AIT es el mejor!</item>
+        <item>¡AIT es mas alto!</item>
+    </string-array>
+
+    <string-array name="span_q10_options">
+        <item>la silla</item>
+        <item>la cama</item>
+        <item>el muro</item>
+        <item>la casa</item>
+    </string-array>
 </resources>

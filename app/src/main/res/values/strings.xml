@@ -133,6 +133,8 @@
     <string name="q6_what_verb_means_to_eat">Q6: What verb means, to eat</string>
     <string name="q9_how_do_you_say_i_love_ait">Q9: How do you say I love AIT!</string>
     <string name="q10_what_is_this">Q10: What is this?</string>
+    <string name="retry">Retry</string>
+    <string name="relogin">Relogin</string>
     <string-array name="c_span_q1_options">
         <item>你好</item>
         <item>안녕하세요</item>

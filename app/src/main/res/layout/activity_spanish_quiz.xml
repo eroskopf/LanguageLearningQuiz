@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,10 +10,15 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/app_bar_height"
+        android:layout_width="413dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="4dp"
         android:fitsSystemWindows="true"
-        android:theme="@style/Theme.LanguageLearningQuiz.AppBarOverlay">
+        android:theme="@style/Theme.LanguageLearningQuiz.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/toolbar_layout"
@@ -22,7 +28,8 @@
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:toolbarId="@+id/toolbar">
+            app:toolbarId="@+id/toolbar"
+            app:layout_constraintTop_toBottomOf="@+id/app_bar">
 
             <com.flaviofaria.kenburnsview.KenBurnsView
                 android:layout_width="match_parent"
@@ -30,225 +37,224 @@
                 android:src="@drawable/spanish_map"
                 />
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                app:popupTheme="@style/Theme.LanguageLearningQuiz.PopupOverlay" />
-
-
-
         </com.google.android.material.appbar.CollapsingToolbarLayout>
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/scrollView2"
+        android:layout_width="407dp"
+        android:layout_height="631dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:orientation="vertical"
-        android:background="#f7d668">
-
-
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text='@string/q1_how_do_you_say_hello'
-            android:textStyle="bold"
-            android:textSize="20sp"/>
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:orientation="vertical">
 
-        <Spinner
-            android:id="@+id/q1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:entries="@array/span_q1_options" />
 
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text='@string/q2_how_do_you_say_i_am_living_in_budapest'
-            android:textStyle="bold"
-            android:textSize="20sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text='@string/q1_how_do_you_say_hello'
+                android:textStyle="bold"
+                android:textSize="20sp"/>
 
-        <Spinner
-            android:id="@+id/q2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:entries="@array/span_q2_options" />
+            <Spinner
+                android:id="@+id/q1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:entries="@array/span_q1_options" />
 
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text='@string/q3_how_do_you_say_8_30'
-            android:textStyle="bold"
-            android:textSize="20sp"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text='@string/q2_how_do_you_say_i_am_living_in_budapest'
+                android:textStyle="bold"
+                android:textSize="20sp"/>
 
-        <Spinner
-            android:id="@+id/q3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:entries="@array/span_q3_options" />
+            <Spinner
+                android:id="@+id/q2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:entries="@array/span_q2_options" />
 
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text='@string/q4_what_is_this_animal'
-            android:textStyle="bold"
-            android:textSize="20sp"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text='@string/q3_how_do_you_say_8_30'
+                android:textStyle="bold"
+                android:textSize="20sp"/>
 
-        <View
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:background="@drawable/dog"/>
+            <Spinner
+                android:id="@+id/q3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:entries="@array/span_q3_options" />
 
-        <Spinner
-            android:id="@+id/q4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:entries="@array/span_q4_options" />
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text='@string/q4_what_is_this_animal'
+                android:textStyle="bold"
+                android:textSize="20sp"/>
 
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text='@string/q5_where_do_you_go_to_use_the_bathroom'
-            android:textStyle="bold"
-            android:textSize="20sp"/>
+            <View
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:background="@drawable/dog"/>
 
-        <Spinner
-            android:id="@+id/q5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:entries="@array/span_q5_options" />
+            <Spinner
+                android:id="@+id/q4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:entries="@array/span_q4_options" />
 
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text='@string/q6_what_verb_means_to_drive'
-            android:textStyle="bold"
-            android:textSize="20sp"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text='@string/q5_where_do_you_go_to_use_the_bathroom'
+                android:textStyle="bold"
+                android:textSize="20sp"/>
 
-        <Spinner
-            android:id="@+id/q6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:entries="@array/span_q6_options" />
+            <Spinner
+                android:id="@+id/q5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:entries="@array/span_q5_options" />
 
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text='@string/q7_how_do_you_say_it_is_snowing'
-            android:textStyle="bold"
-            android:textSize="20sp"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text='@string/q6_what_verb_means_to_drive'
+                android:textStyle="bold"
+                android:textSize="20sp"/>
 
-        <Spinner
-            android:id="@+id/q7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:entries="@array/span_q7_options" />
+            <Spinner
+                android:id="@+id/q6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:entries="@array/span_q6_options" />
 
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text='@string/q8_what_is_this'
-            android:textStyle="bold"
-            android:textSize="20sp"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text='@string/q7_how_do_you_say_it_is_snowing'
+                android:textStyle="bold"
+                android:textSize="20sp"/>
 
-        <View
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:background="@drawable/suitcase"/>
+            <Spinner
+                android:id="@+id/q7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:entries="@array/span_q7_options" />
 
-        <Spinner
-            android:id="@+id/q8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:entries="@array/span_q8_options" />
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text='@string/q8_what_is_this'
+                android:textStyle="bold"
+                android:textSize="20sp"/>
 
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text='@string/q9_how_do_you_say_ait_is_the_best'
-            android:textStyle="bold"
-            android:textSize="20sp"/>
+            <View
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:background="@drawable/suitcase"/>
 
-        <Spinner
-            android:id="@+id/q9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:entries="@array/span_q9_options" />
+            <Spinner
+                android:id="@+id/q8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:entries="@array/span_q8_options" />
 
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text='@string/q10_what_do_you_call_this'
-            android:textStyle="bold"
-            android:textSize="20sp"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text='@string/q9_how_do_you_say_ait_is_the_best'
+                android:textStyle="bold"
+                android:textSize="20sp"/>
 
-        <View
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:background="@drawable/bed"/>
+            <Spinner
+                android:id="@+id/q9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:entries="@array/span_q9_options" />
 
-        <Spinner
-            android:id="@+id/q10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:entries="@array/span_q10_options" />
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text='@string/q10_what_do_you_call_this'
+                android:textStyle="bold"
+                android:textSize="20sp"/>
 
-        <Button
-            android:id="@+id/submitbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/submit" />
+            <View
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bed"/>
 
-    </LinearLayout>
+            <Spinner
+                android:id="@+id/q10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:entries="@array/span_q10_options" />
+
+            <Button
+                android:id="@+id/submitbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/submit" />
+
+        </LinearLayout>
     </ScrollView>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

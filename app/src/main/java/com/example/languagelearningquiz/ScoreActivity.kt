@@ -1,5 +1,6 @@
 package com.example.languagelearningquiz
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.languagelearningquiz.data.LanguageUser
@@ -33,6 +34,16 @@ class ScoreActivity : AppCompatActivity() {
         //check to see if new score is high score
         setAttributes(newScore)
         //display the scoreboards
+
+        binding.retry.setOnClickListener {
+            val intent = Intent(this, chooseLanguageActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnNewUser.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 

@@ -39,15 +39,14 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="50dp"
-                    tools:layout_conversion_absoluteWidth="50dp"
-                    android:contentDescription="city" />
+                    tools:layout_conversion_absoluteWidth="50dp" />
 
                 <TextView
                     android:id="@+id/tvName"
-                    android:layout_width="128dp"
-                    android:layout_height="27dp"
-                    android:text="demo"
-                    android:textSize="15sp"
+                    android:layout_width="160dp"
+                    android:layout_height="29dp"
+                    android:text="@string/demo"
+                    android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.356"
@@ -58,9 +57,10 @@
 
                 <TextView
                     android:id="@+id/tvScore"
-                    android:layout_width="99dp"
-                    android:layout_height="28dp"
-                    android:text="TextView"
+                    android:layout_width="96dp"
+                    android:layout_height="32dp"
+                    android:text="@string/textview"
+                    android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tvName"

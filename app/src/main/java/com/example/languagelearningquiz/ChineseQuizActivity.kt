@@ -26,7 +26,9 @@ class ChineseQuizActivity : AppCompatActivity() {
         binding.submitbtn.setOnClickListener {
             score = 0
             calculateScore()
-            startActivity(Intent(this, ScoreActivity::class.java))
+            val intent = Intent(this, ScoreActivity::class.java)
+            intent.putExtra("score", score)
+            startActivity(intent)
         }
     }
 
@@ -45,19 +47,19 @@ class ChineseQuizActivity : AppCompatActivity() {
         val answer10 = binding.q10.selectedItemPosition
 
         when (answer1) {
-            1 -> {score+=1}
+            0 -> {score+=1}
         }
         when (answer2) {
-            2 -> {score+=1}
+            1 -> {score+=1}
         }
         when (answer3) {
-            3 -> {score+=1}
+            2 -> {score+=1}
         }
         when (answer4) {
             3 -> {score+=1}
         }
         when (answer5) {
-            0 -> {score+=1}
+            1 -> {score+=1}
         }
         when (answer6) {
             3 -> {score+=1}
@@ -66,13 +68,13 @@ class ChineseQuizActivity : AppCompatActivity() {
             1 -> {score+=1}
         }
         when (answer8) {
-            2 -> {score+=1}
+            3 -> {score+=1}
         }
         when (answer9) {
-            2 -> {score+=1}
+            0 -> {score+=1}
         }
         when (answer10) {
-            1 -> {score+=1}
+            2 -> {score+=1}
         }
 
       //  binding.testScore.text = score.toString()

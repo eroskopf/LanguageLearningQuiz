@@ -11,11 +11,11 @@ class ScoreAdapter(
     private val context: Context
 ) : RecyclerView.Adapter<ScoreAdapter.ViewHolder>() {
 
-    var scoreList: MutableList<LanguageUser> = mutableListOf<LanguageUser>(
-    )
+    var scoreList: MutableList<LanguageUser> = mutableListOf<LanguageUser>()
 
-    fun addUser(user: LanguageUser) {
-        scoreList.add(user)
+    fun addUser(user: LanguageUser, language: String) {
+        val modifiedUser = LanguageUser(user.displayName, language, user.ChScore, user.SpScore, user.uid)
+        scoreList.add(modifiedUser)
         notifyItemInserted(scoreList.lastIndex)
     }
 

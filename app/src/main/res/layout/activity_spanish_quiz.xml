@@ -48,7 +48,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:orientation="vertical"
         android:background="#f7d668">
@@ -58,9 +58,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text='Q1: How do you say "Hello"'
+            android:text='@string/q1_how_do_you_say_hello'
             android:textStyle="bold"
-            android:textSize="20dp"/>
+            android:textSize="20sp"/>
 
         <Spinner
             android:id="@+id/q1"
@@ -75,9 +75,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text='Q2: How do you say "I am living in budapest"'
+            android:text='@string/q2_how_do_you_say_i_am_living_in_budapest'
             android:textStyle="bold"
-            android:textSize="20dp"/>
+            android:textSize="20sp"/>
 
         <Spinner
             android:id="@+id/q2"
@@ -92,9 +92,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text='Q3: How do you say "8:30"'
+            android:text='@string/q3_how_do_you_say_8_30'
             android:textStyle="bold"
-            android:textSize="20dp"/>
+            android:textSize="20sp"/>
 
         <Spinner
             android:id="@+id/q3"
@@ -109,9 +109,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text='Q4: What is this animal?'
+            android:text='@string/q4_what_is_this_animal'
             android:textStyle="bold"
-            android:textSize="20dp"/>
+            android:textSize="20sp"/>
 
         <View
             android:layout_width="200dp"
@@ -132,9 +132,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text='Q5: Where do you go to use the bathroom?'
+            android:text='@string/q5_where_do_you_go_to_use_the_bathroom'
             android:textStyle="bold"
-            android:textSize="20dp"/>
+            android:textSize="20sp"/>
 
         <Spinner
             android:id="@+id/q5"
@@ -149,9 +149,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text='Q6: What verb means, "to drive"'
+            android:text='@string/q6_what_verb_means_to_drive'
             android:textStyle="bold"
-            android:textSize="20dp"/>
+            android:textSize="20sp"/>
 
         <Spinner
             android:id="@+id/q6"
@@ -166,9 +166,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text='Q7: How do you say "it is snowing"'
+            android:text='@string/q7_how_do_you_say_it_is_snowing'
             android:textStyle="bold"
-            android:textSize="20dp"/>
+            android:textSize="20sp"/>
 
         <Spinner
             android:id="@+id/q7"
@@ -183,9 +183,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text='Q8: What is this animal?'
+            android:text='@string/q8_what_is_this'
             android:textStyle="bold"
-            android:textSize="20dp"/>
+            android:textSize="20sp"/>
 
         <View
             android:layout_width="200dp"
@@ -206,9 +206,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text='Q9: How do you say "AIT is the best!"'
+            android:text='@string/q9_how_do_you_say_ait_is_the_best'
             android:textStyle="bold"
-            android:textSize="20dp"/>
+            android:textSize="20sp"/>
 
         <Spinner
             android:id="@+id/q9"
@@ -223,9 +223,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text='Q10: What do you call this?'
+            android:text='@string/q10_what_do_you_call_this'
             android:textStyle="bold"
-            android:textSize="20dp"/>
+            android:textSize="20sp"/>
 
         <View
             android:layout_width="200dp"
@@ -246,10 +246,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Submit" />
-
-
-
+            android:text="@string/submit" />
 
     </LinearLayout>
     </ScrollView>

@@ -42,7 +42,7 @@ class LoginActivity : AppCompatActivity() {
             ).addOnSuccessListener {
                 Toast.makeText(
                     this,
-                    "Registration OK",
+                    getString(R.string.registration_ok),
                     Toast.LENGTH_LONG
                 ).show()
                 // Create a new user with a first and last name
@@ -50,7 +50,7 @@ class LoginActivity : AppCompatActivity() {
                 val uid = it.user!!.uid
                 val user = LanguageUser(
                     binding.etDisplayName.text.toString(),
-                    "Chinese",
+                    getString(R.string.chinese),
                     0,
                     0,
                     uid,
@@ -81,7 +81,7 @@ class LoginActivity : AppCompatActivity() {
             ).addOnSuccessListener {
                 Toast.makeText(
                     this,
-                    "Login OK",
+                    getString(R.string.login_ok),
                     Toast.LENGTH_LONG
                 ).show()
 
@@ -102,11 +102,15 @@ class LoginActivity : AppCompatActivity() {
     fun isFormValid(): Boolean {
         return when {
             binding.etEmail.text.isEmpty() -> {
-                binding.etEmail.error = "This field can not be empty"
+                binding.etEmail.error = getString(R.string.error_email)
                 false
             }
             binding.etPassword.text.isEmpty() -> {
-                binding.etPassword.error = "The password can not be empty"
+                binding.etPassword.error = getString(R.string.error_password)
+                false
+            }
+            binding.etDisplayName.text.isEmpty() -> {
+                binding.etDisplayName.error = getString(R.string.error_displayname)
                 false
             }
             else -> true

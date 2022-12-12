@@ -101,5 +101,105 @@
         <item>el muro</item>
         <item>la casa</item>
     </string-array>
+
+
     <string name="title_activity_chinese_quiz">ChineseQuizActivity</string>
+    <string name="textview">TextView</string>
+    <string name="error_email">This field can not be empty</string>
+    <string name="error_password">The password can not be empty</string>
+    <string name="error_displayname">The display name can not be empty</string>
+    <string name="login_ok">Login OK</string>
+    <string name="chinese">Chinese</string>
+    <string name="registration_ok">Registration OK</string>
+    <string name="spanish">Spanish</string>
+    <string name="chinese_scoreboard">Chinese Quiz High Scoreboard</string>
+    <string name="spanish_scoreboard">Spanish Quiz HighScoreboard</string>
+    <string name="demo">demo</string>
+    <string name="languagequiz">LanguageQuiz</string>
+    <string name="q1_how_do_you_say_hello">Q1: How do you say Hello</string>
+    <string name="q2_how_do_you_say_i_am_living_in_budapest">Q2: How do you say I am living in budapest</string>
+    <string name="q3_how_do_you_say_8_30">Q3: How do you say 8:30</string>
+    <string name="q4_what_is_this_animal">Q4: What is this animal?</string>
+    <string name="q5_where_do_you_go_to_use_the_bathroom">Q5: Where do you go to use the bathroom?</string>
+    <string name="q6_what_verb_means_to_drive">Q6: What verb means, to drive</string>
+    <string name="q7_how_do_you_say_it_is_snowing">Q7: How do you say it is snowing</string>
+    <string name="q8_what_is_this">Q8: What is this?</string>
+    <string name="q9_how_do_you_say_ait_is_the_best">Q9: How do you say AIT is the best!</string>
+    <string name="q10_what_do_you_call_this">Q10: What do you call this?</string>
+    <string name="submit">Submit</string>
+    <string name="enter_name_to_be_displayed">Enter name to be displayed</string>
+    <string name="choose_a_language">Choose a Language</string>
+    <string name="q2_how_do_you_say_budapest">Q2: How do you say Budapest</string>
+    <string name="q6_what_verb_means_to_eat">Q6: What verb means, to eat</string>
+    <string name="q9_how_do_you_say_i_love_ait">Q9: How do you say I love AIT!</string>
+    <string name="q10_what_is_this">Q10: What is this?</string>
+    <string-array name="c_span_q1_options">
+        <item>你好</item>
+        <item>안녕하세요</item>
+        <item>สวัสดี</item>
+        <item>ਸਤ ਸ੍ਰੀ ਅਕਾਲ</item>
+    </string-array>
+
+    <string-array name="c_span_q2_options">
+        <item>维也纳</item>
+        <item>布达佩斯</item>
+        <item>巴黎</item>
+        <item>芝加哥</item>
+    </string-array>
+
+    <string-array name="c_span_q3_options">
+        <item>早上</item>
+        <item>七点一刻</item>
+        <item>八点半</item>
+        <item>半夜</item>
+    </string-array>
+
+    <string-array name="c_span_q4_options">
+        <item>猴子</item>
+        <item>猫</item>
+        <item>鸡</item>
+        <item>狗</item>
+    </string-array>
+
+    <string-array name="c_span_q5_options">
+        <item>卧室</item>
+        <item>洗手间</item>
+        <item>办公室</item>
+        <item>厨房</item>
+    </string-array>
+
+    <string-array name="c_span_q6_options">
+        <item>跑</item>
+        <item>唱</item>
+        <item>看</item>
+        <item>吃</item>
+    </string-array>
+
+    <string-array name="c_span_q7_options">
+        <item>正在下雨</item>
+        <item>正在下雪</item>
+        <item>正在我冷死了</item>
+        <item>雪花很漂亮</item>
+    </string-array>
+
+    <string-array name="c_span_q8_options">
+        <item>冰淇淋</item>
+        <item>巧克力</item>
+        <item>蛋糕</item>
+        <item>早上好中国现在我有冰淇淋，我很喜欢冰淇淋</item>
+    </string-array>
+
+    <string-array name="c_span_q9_options">
+        <item>我爱AIT!</item>
+        <item>我买AIT!</item>
+        <item>我去AIT!</item>
+        <item>我喝AIT!</item>
+    </string-array>
+
+    <string-array name="c_span_q10_options">
+        <item>摩托车</item>
+        <item>飞机</item>
+        <item>手机</item>
+        <item>烤面包机</item>
+    </string-array>
 </resources>

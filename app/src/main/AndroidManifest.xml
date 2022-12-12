@@ -16,7 +16,7 @@
         <activity
             android:name=".ChineseQuizActivity"
             android:exported="false"
-            android:label="@string/chin_quiz_name"
+            android:label="Chinese Quiz"
             android:theme="@style/Theme.LanguageLearningQuiz.NoActionBar" />
         <activity
             android:name=".SpanishQuizActivity"
@@ -28,13 +28,13 @@
             android:exported="false"
             android:theme="@style/Theme.LanguageLearningQuiz.NoActionBar" />
         <activity
-            android:name=".MainActivity"
-            android:exported="false"
-            android:theme="@style/Theme.LanguageLearningQuiz.NoActionBar" />
-        <activity
             android:name=".LoginActivity"
             android:exported="false"
             android:theme="@style/Theme.LanguageLearningQuiz.NoActionBar" />
+        <activity
+            android:name=".ScoreActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LanguageLearningQuiz.NoActionBar"/>
         <activity
             android:name=".SplashActivity"
             android:exported="true"

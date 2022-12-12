@@ -32,15 +32,16 @@ class chooseLanguageActivity : AppCompatActivity() {
                 .collection("languageusers")
                 .whereEqualTo("uid", id)
                 .get().addOnSuccessListener {
+                    val docname = it.documents.get(0).id
                     val langUser = it.documents.get(0).toObject(LanguageUser::class.java)
                     val updatedUser = LanguageUser(
                         langUser!!.displayName,
-                        "Chinese",
+                        getString(R.string.chinese),
                         langUser!!.ChScore,
                         langUser.SpScore,
                         id!!,
                     )
-                    db.collection("languageusers").document(id!!).set(updatedUser)
+                    db.collection("languageusers").document(docname).set(updatedUser)
                 }
             startActivity(Intent(this, ChineseQuizActivity::class.java))
         }
@@ -51,14 +52,15 @@ class chooseLanguageActivity : AppCompatActivity() {
                 .whereEqualTo("uid", id)
                 .get().addOnSuccessListener {
                     val langUser = it.documents.get(0).toObject(LanguageUser::class.java)
+                    val docname = it.documents.get(0).id
                     val updatedUser = LanguageUser(
                         langUser!!.displayName,
-                        "Spanish",
+                        getString(R.string.spanish),
                         langUser!!.ChScore,
                         langUser.SpScore,
                         id!!,
                     )
-                    db.collection("languageusers").document(id!!).set(updatedUser)
+                    db.collection("languageusers").document(docname).set(updatedUser)
                 }
             startActivity(Intent(this, SpanishQuizActivity::class.java))
         }

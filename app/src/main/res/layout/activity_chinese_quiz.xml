@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".SpanishQuizActivity">
+    tools:context=".ChineseQuizActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/app_bar_height"
+        android:layout_width="413dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="4dp"
         android:fitsSystemWindows="true"
-        android:theme="@style/Theme.LanguageLearningQuiz.AppBarOverlay">
+        android:theme="@style/Theme.LanguageLearningQuiz.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/toolbar_layout"
@@ -22,13 +28,115 @@
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:toolbarId="@+id/toolbar">
+            app:toolbarId="@+id/toolbar"
+            app:layout_constraintTop_toBottomOf="@+id/app_bar">
 
             <com.flaviofaria.kenburnsview.KenBurnsView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/spanish_map"
+                android:src="@drawable/chinesespeakers"
                 />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="407dp"
+        android:layout_height="631dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text='@string/q1_how_do_you_say_hello'
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/q1"
+                android:layout_width="181dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:entries="@array/c_span_q1_options" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text='@string/q2_how_do_you_say_budapest'
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/q2"
+                android:layout_width="177dp"
+                android:layout_height="59dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:entries="@array/c_span_q2_options" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text='@string/q3_how_do_you_say_8_30'
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/q3"
+                android:layout_width="160dp"
+                android:layout_height="62dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:entries="@array/c_span_q3_options" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text='@string/q4_what_is_this_animal'
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:background="@drawable/dog" />
+
+            <Spinner
+                android:id="@+id/q4"
+                android:layout_width="149dp"
+                android:layout_height="51dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:entries="@array/c_span_q4_options" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text='@string/q5_where_do_you_go_to_use_the_bathroom'
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -37,227 +145,122 @@
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/Theme.LanguageLearningQuiz.PopupOverlay" />
 
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-    </com.google.android.material.appbar.AppBarLayout>
+            <Spinner
+                android:id="@+id/q5"
+                android:layout_width="167dp"
+                android:layout_height="51dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:entries="@array/c_span_q5_options" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text='@string/q6_what_verb_means_to_eat'
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/submitbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Submit" />
+            <Spinner
+                android:id="@+id/q6"
+                android:layout_width="122dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:entries="@array/c_span_q6_options" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text='Q1: How do you say "Hello"'
-            android:textStyle="bold"
-            android:textSize="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text='@string/q7_how_do_you_say_it_is_snowing'
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-        <Spinner
-            android:id="@+id/q1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:entries="@array/span_q1_options" />
+            <Spinner
+                android:id="@+id/q7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:entries="@array/c_span_q7_options" />
 
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text='Q2: How do you say "I am living in budapest"'
-            android:textStyle="bold"
-            android:textSize="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text='@string/q8_what_is_this'
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-        <Spinner
-            android:id="@+id/q2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:entries="@array/span_q2_options" />
+            <View
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bingqilin" />
 
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text='Q3: How do you say "8:30"'
-            android:textStyle="bold"
-            android:textSize="20dp"/>
+            <Spinner
+                android:id="@+id/q8"
+                android:layout_width="wrap_content"
+                android:layout_height="71dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:entries="@array/c_span_q8_options" />
 
-        <Spinner
-            android:id="@+id/q3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:entries="@array/span_q3_options" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text='@string/q9_how_do_you_say_i_love_ait'
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text='Q4: What is this animal?'
-            android:textStyle="bold"
-            android:textSize="20dp"/>
+            <Spinner
+                android:id="@+id/q9"
+                android:layout_width="wrap_content"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:entries="@array/c_span_q9_options" />
 
-        <View
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:background="@drawable/dog"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text='@string/q10_what_is_this'
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-        <Spinner
-            android:id="@+id/q4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:entries="@array/span_q4_options" />
+            <View
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:background="@drawable/android" />
 
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text='Q5: Where do you go to use the bathroom?'
-            android:textStyle="bold"
-            android:textSize="20dp"/>
-
-        <Spinner
-            android:id="@+id/q5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:entries="@array/span_q5_options" />
-
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text='Q6: What verb means, "to drive"'
-            android:textStyle="bold"
-            android:textSize="20dp"/>
-
-        <Spinner
-            android:id="@+id/q6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:entries="@array/span_q6_options" />
-
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text='Q7: How do you say "it is snowing"'
-            android:textStyle="bold"
-            android:textSize="20dp"/>
-
-        <Spinner
-            android:id="@+id/q7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:entries="@array/span_q7_options" />
-
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text='Q8: What is this animal?'
-            android:textStyle="bold"
-            android:textSize="20dp"/>
-
-        <View
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:background="@drawable/suitcase"/>
-
-        <Spinner
-            android:id="@+id/q8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:entries="@array/span_q8_options" />
-
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text='Q9: How do you say "AIT is the best!"'
-            android:textStyle="bold"
-            android:textSize="20dp"/>
-
-        <Spinner
-            android:id="@+id/q9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:entries="@array/span_q9_options" />
-
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text='Q10: What do you call this?'
-            android:textStyle="bold"
-            android:textSize="20dp"/>
-
-        <View
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:background="@drawable/bed"/>
-
-        <Spinner
-            android:id="@+id/q10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:entries="@array/span_q10_options" />
+            <Spinner
+                android:id="@+id/q10"
+                android:layout_width="158dp"
+                android:layout_height="61dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:entries="@array/c_span_q10_options" />
 
 
+            <Button
+                android:id="@+id/submitbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text='@string/submit' />
 
 
+        </LinearLayout>
+    </ScrollView>
 
 
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerTodo"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="20dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            />
-    </LinearLayout>
-
-
-
-
-
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

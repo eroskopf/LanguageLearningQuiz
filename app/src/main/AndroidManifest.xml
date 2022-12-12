@@ -16,7 +16,7 @@
         <activity
             android:name=".ChineseQuizActivity"
             android:exported="false"
-            android:label="Chinese Quiz"
+            android:label="@string/chin_quiz_name"
             android:theme="@style/Theme.LanguageLearningQuiz.NoActionBar" />
         <activity
             android:name=".SpanishQuizActivity"

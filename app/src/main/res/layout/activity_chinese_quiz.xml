@@ -34,8 +34,7 @@
             <com.flaviofaria.kenburnsview.KenBurnsView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/chinesespeakers"
-                />
+                android:src="@drawable/chinesespeakers" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 

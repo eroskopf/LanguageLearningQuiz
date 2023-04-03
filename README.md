@@ -1,5 +1,5 @@
 # LanguageLearningQuiz
-An app created in Android Studio that administers a language learning quiz and keeps a high scoreboard. 
+An app created in Android Studio that administers a language learning quiz and keeps a high scoreboard. I completed this as a final project for a class I was taking with a partner. 
 
 Implements:
 - Firebase persistent memory
